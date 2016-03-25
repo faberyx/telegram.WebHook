@@ -39,12 +39,12 @@ namespace telegram.webHook.Classes.Bots
                         break;
 
                     case "laugh":
-                        await BotApi.SendVoice(message.Chat.Id, resource.Load("zarbalaugh.mp3"));
+                        await BotApi.SendVoice(message.Chat.Id, resource.Load(settings.ResourcesPath + "zarbalaugh.mp3"));
                         resource.Dispose();
                         break;
 
                     case "eat":
-                        data = dictionary.Load("zarba_foto");
+                        data = dictionary.Load(settings.DictionariesPath + "zarba_foto");
                         await BotApi.SendPhoto(message.Chat.Id, resource.Load(settings.ResourcesPath +  data[new Random().Next(0, data.Length)]));
                         resource.Dispose();
                         break;

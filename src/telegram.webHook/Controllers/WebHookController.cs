@@ -47,7 +47,7 @@ namespace telegram.webHook.Controllers
                     BotCommandFactory factory = new BotCommandFactory();
                     var command = factory.CreateCommand(match.Groups["command"].Value.Trim());
                     if (command == null)
-                        await Bot.GetApi(settings.ApiToken).SendTextMessage(update.Message.Chat.Id, string.Format("...idiota.. devi aver scritto qualche cazzata.. {0}", update.Message.From.FirstName));
+                        await Bot.GetApi(settings.ApiToken).SendTextMessage(update.Message.Chat.Id, $"...idiota.. devi aver scritto qualche cazzata.. {update.Message.From.FirstName}");
                     else
                     {
                         command.settings = settings;

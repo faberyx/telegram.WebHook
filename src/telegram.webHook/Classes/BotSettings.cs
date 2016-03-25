@@ -10,5 +10,7 @@ namespace telegram.webHook.Classes
         public string ApiToken { get; set; }
         public string DictionariesPath {get;set;}
         public string ResourcesPath { get; set; }
+
+        public string WebSiteFbot { get; set; }
     }
 }

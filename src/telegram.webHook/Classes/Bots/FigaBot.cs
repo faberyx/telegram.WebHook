@@ -25,41 +25,23 @@ namespace telegram.webHook.Classes.Bots
             try
             {
                 string data;
-                string what = "";
-
-                switch (messageMatches.Groups["action"].Value.Trim())
-                {
-                    case "bionda":
-                        what = "?what=blonde";
-                        break;
-                    case "bruna":
-                        what = "?what=brunette";
-                        break;
-                    case "rossa":
-                        what = "?what=redhead";
-                        break;
-                }
-
                 using (var client = new HttpClient())
                 {
-                    data = await client.GetStringAsync($"http://www.sexyandfunny.com/10randomphotos.php{what}");
+                    data = await client.GetStringAsync($"{settings.WebSiteFbot}?what={messageMatches.Groups["action"].Value.Trim()}");
                 }
                 var match = Regex.Match(data, "<img.*src=\"(.*)\".*class=\"random-image-img");
                 string url = match.Groups[1].Value;
-                Stream photodata;
+                Stream photodata = null;
 
                 using (HttpClient client = new HttpClient())
                 {
-                    using (var request = new HttpRequestMessage(HttpMethod.Get, url))
-                    {
-
-                        photodata = await (await client.SendAsync(request)).Content.ReadAsStreamAsync();
-                         
-                    }
-
+                    await client.GetStreamAsync(url).ContinueWith(
+                        (req) => {
+                            photodata =  req.Result;
+                        }); 
                 }
-
-                var fl = new FileToSend(string.Format("figa_richiesta_da_{0}.jpg", message.Chat.FirstName), photodata);
+                
+                var fl = new FileToSend($"figa_richiesta_da_{message.Chat.FirstName}.jpg", photodata);
                 await BotApi.SendPhoto(message.Chat.Id, fl);
                 photodata.Dispose();
             }

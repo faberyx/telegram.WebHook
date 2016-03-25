@@ -1,0 +1,245 @@
+﻿2016-03-17 08:13:30.559 +01:00 [Debug] Hosting starting
+2016-03-17 08:13:31.055 +01:00 [Debug] Hosting started
+2016-03-17 08:13:31.323 +01:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:1632/ text/html 
+2016-03-17 08:13:32.431 +01:00 [Debug] Request did not match any routes.
+2016-03-17 08:13:32.439 +01:00 [Information] Request finished in 0.1047ms 404 
+2016-03-17 08:13:32.471 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1632/WebHook application/json 252
+2016-03-17 08:13:32.479 +01:00 [Debug] Request successfully matched the route with name 'null' and template '"WebHook"'.
+2016-03-17 08:13:32.535 +01:00 [Debug] Executing action "telegram.webHook.Controllers.WebHookController.Post"
+2016-03-17 08:13:33.463 +01:00 [Information] Executing action method "telegram.webHook.Controllers.WebHookController.Post" with arguments (["Telegram.Bot.Types.Update"]) - ModelState is Valid'
+2016-03-17 08:13:37.475 +01:00 [Information] Request finished in 0.5ms 500
+2016-03-17 08:13:37.475 +01:00 [Error] An unhandled exception was thrown by the application.
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Projects\telegram.web\telegram.webHook\src\telegram.webHook\Files\Dictionaries\banned.txt'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding)
+   at System.IO.File.InternalReadAllLines(String path, Encoding encoding)
+   at System.IO.File.ReadAllLines(String path)
+   at telegram.webHook.Classes.Resources.LoadDictionary.Load(String filename) in C:\Projects\telegram.webHook\src\telegram.webHook\Classes\Resources\LoadDictionary.cs:line 15
+   at telegram.webHook.Controllers.WebHookController.<Post>d__5.MoveNext() in C:\Projects\telegram.webHook\src\telegram.webHook\Controllers\WebHookController.cs:line 35
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNet.Mvc.Controllers.ControllerActionExecutor.<CastToObject>d__8`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNet.Mvc.Controllers.ControllerActionInvoker.<InvokeActionAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNet.Mvc.Controllers.FilterActionInvoker.<InvokeActionFilterAsync>d__53.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNet.Mvc.Controllers.FilterActionInvoker.<InvokeAsync>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Mvc.Infrastructure.MvcRouteHandler.<RouteAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Mvc.Routing.InnerAttributeRoute.<RouteAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Routing.RouteCollection.<RouteAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.IISPlatformHandler.IISPlatformHandlerMiddleware.<Invoke>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Hosting.Internal.HostingEngine.<>c__DisplayClass32_0.<<Start>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter.GetResult()
+   at Microsoft.AspNet.Server.Kestrel.Http.Frame.<RequestProcessingAsync>d__79.MoveNext()
+2016-03-17 08:13:37.851 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1632/api/values  
+2016-03-17 08:13:38.003 +01:00 [Debug] Request did not match any routes.
+2016-03-17 08:13:38.003 +01:00 [Information] Request finished in 0ms 404 
+2016-03-17 08:13:39.034 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1632/favicon.ico  
+2016-03-17 08:13:39.335 +01:00 [Debug] Request did not match any routes.
+2016-03-17 08:13:39.335 +01:00 [Information] Request finished in 0ms 404 
+2016-03-17 08:14:15.924 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1632/WebHook application/json 252
+2016-03-17 08:14:15.924 +01:00 [Debug] Request successfully matched the route with name 'null' and template '"WebHook"'.
+2016-03-17 08:14:15.928 +01:00 [Debug] Executing action "telegram.webHook.Controllers.WebHookController.Post"
+2016-03-17 08:14:15.932 +01:00 [Information] Executing action method "telegram.webHook.Controllers.WebHookController.Post" with arguments (["Telegram.Bot.Types.Update"]) - ModelState is Valid'
+2016-03-17 08:14:18.759 +01:00 [Information] Request finished in 0.2843ms 500
+2016-03-17 08:14:18.759 +01:00 [Error] An unhandled exception was thrown by the application.
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Projects\telegram.web\telegram.webHook\src\telegram.webHook\Files\Dictionaries\banned.txt'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding)
+   at System.IO.File.InternalReadAllLines(String path, Encoding encoding)
+   at System.IO.File.ReadAllLines(String path)
+   at telegram.webHook.Classes.Resources.LoadDictionary.Load(String filename) in C:\Projects\telegram.webHook\src\telegram.webHook\Classes\Resources\LoadDictionary.cs:line 15
+   at telegram.webHook.Controllers.WebHookController.<Post>d__5.MoveNext() in C:\Projects\telegram.webHook\src\telegram.webHook\Controllers\WebHookController.cs:line 35
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNet.Mvc.Controllers.ControllerActionExecutor.<CastToObject>d__8`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNet.Mvc.Controllers.ControllerActionInvoker.<InvokeActionAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNet.Mvc.Controllers.FilterActionInvoker.<InvokeActionFilterAsync>d__53.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNet.Mvc.Controllers.FilterActionInvoker.<InvokeAsync>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Mvc.Infrastructure.MvcRouteHandler.<RouteAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Mvc.Routing.InnerAttributeRoute.<RouteAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Routing.RouteCollection.<RouteAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.IISPlatformHandler.IISPlatformHandlerMiddleware.<Invoke>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Hosting.Internal.HostingEngine.<>c__DisplayClass32_0.<<Start>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter.GetResult()
+   at Microsoft.AspNet.Server.Kestrel.Http.Frame.<RequestProcessingAsync>d__79.MoveNext()
+2016-03-17 08:14:36.006 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1632/WebHook application/json 252
+2016-03-17 08:14:36.014 +01:00 [Debug] Request successfully matched the route with name 'null' and template '"WebHook"'.
+2016-03-17 08:14:36.014 +01:00 [Debug] Executing action "telegram.webHook.Controllers.WebHookController.Post"
+2016-03-17 08:14:40.269 +01:00 [Information] Executing action method "telegram.webHook.Controllers.WebHookController.Post" with arguments (["Telegram.Bot.Types.Update"]) - ModelState is Valid'
+2016-03-17 08:15:43.210 +01:00 [Information] Request finished in 6.7204ms 500
+2016-03-17 08:15:43.215 +01:00 [Error] An unhandled exception was thrown by the application.
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Projects\telegram.web\telegram.webHook\src\telegram.webHook\Files\Dictionaries\banned.txt'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding)
+   at System.IO.File.InternalReadAllLines(String path, Encoding encoding)
+   at System.IO.File.ReadAllLines(String path)
+   at telegram.webHook.Classes.Resources.LoadDictionary.Load(String filename) in C:\Projects\telegram.webHook\src\telegram.webHook\Classes\Resources\LoadDictionary.cs:line 15
+   at telegram.webHook.Controllers.WebHookController.<Post>d__5.MoveNext() in C:\Projects\telegram.webHook\src\telegram.webHook\Controllers\WebHookController.cs:line 35
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNet.Mvc.Controllers.ControllerActionExecutor.<CastToObject>d__8`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNet.Mvc.Controllers.ControllerActionInvoker.<InvokeActionAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNet.Mvc.Controllers.FilterActionInvoker.<InvokeActionFilterAsync>d__53.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNet.Mvc.Controllers.FilterActionInvoker.<InvokeAsync>d__44.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Mvc.Infrastructure.MvcRouteHandler.<RouteAsync>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Mvc.Routing.InnerAttributeRoute.<RouteAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Routing.RouteCollection.<RouteAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.IISPlatformHandler.IISPlatformHandlerMiddleware.<Invoke>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Hosting.Internal.RequestServicesContainerMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNet.Hosting.Internal.HostingEngine.<>c__DisplayClass32_0.<<Start>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter.GetResult()
+   at Microsoft.AspNet.Server.Kestrel.Http.Frame.<RequestProcessingAsync>d__79.MoveNext()
+2016-03-17 08:16:04.110 +01:00 [Debug] Hosting starting
+2016-03-17 08:16:04.306 +01:00 [Debug] Hosting started
+2016-03-17 08:16:04.968 +01:00 [Information] Request starting HTTP/1.1 POST http://localhost:1632/WebHook application/json 252
+2016-03-17 08:16:05.641 +01:00 [Debug] Request successfully matched the route with name 'null' and template '"WebHook"'.
+2016-03-17 08:16:05.737 +01:00 [Debug] Executing action "telegram.webHook.Controllers.WebHookController.Post"
+2016-03-17 08:16:06.860 +01:00 [Information] Executing action method "telegram.webHook.Controllers.WebHookController.Post" with arguments (["Telegram.Bot.Types.Update"]) - ModelState is Valid'
+2016-03-17 08:16:06.931 +01:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:1632/ text/html 
+2016-03-17 08:16:06.956 +01:00 [Debug] Request did not match any routes.
+2016-03-17 08:16:10.313 +01:00 [Information] Request finished in 0.3359ms 404 
+2016-03-17 08:16:10.372 +01:00 [Information] Request starting HTTP/1.1 GET http://localhost:1632/api/values  
+2016-03-17 08:16:10.374 +01:00 [Debug] Request did not match any routes.
+2016-03-17 08:16:10.382 +01:00 [Information] Request finished in 0.0015ms 404 
