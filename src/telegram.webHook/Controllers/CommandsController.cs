@@ -53,5 +53,16 @@ namespace telegram.webHook.Controllers
             return Ok(result);
 
         }
+
+        [Route("Load")]
+        [HttpGet]
+        public IActionResult Load(int id = 0)
+        {
+
+            Bot.GetApi(settings.ApiToken).StartReceiving();
+            string result = "Ok";
+            return Ok(result);
+
+        }
     }
 }

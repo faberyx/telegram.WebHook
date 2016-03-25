@@ -17,5 +17,7 @@ namespace telegram.webHook.Models.Entities
         [Required]
         public string Type { get; set; }
         public string Action { get; set; }
+        public string Pattern { get; set; }
+
     }
 }

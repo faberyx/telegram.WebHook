@@ -19,10 +19,12 @@ namespace telegram.webHook.Classes.Bots
 
         public async Task Process(Message message, Match messageMatches)
         {
+
+
             try {
                 switch (messageMatches.Groups["action"].Value.Trim())
                 {
-
+                    
                     case "talk":
                         if (string.IsNullOrEmpty(messageMatches.Groups["pattern"].Value))
                         {

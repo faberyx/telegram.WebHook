@@ -11,7 +11,7 @@ namespace telegram.webHook.Models.Context
     public class SQLiteContext : DbContext
     {
         public DbSet<Dictionary> Dictionary { get; set; }
-
+        public DbSet<Message> Message { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

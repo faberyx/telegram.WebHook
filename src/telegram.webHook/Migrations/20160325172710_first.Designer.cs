@@ -8,8 +8,8 @@ using telegram.webHook.Models.Context;
 namespace telegram.webHook.Migrations
 {
     [DbContext(typeof(SQLiteContext))]
-    [Migration("20160316033738_First")]
-    partial class First
+    [Migration("20160325172710_first")]
+    partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,12 +26,44 @@ namespace telegram.webHook.Migrations
                     b.Property<string>("Message")
                         .IsRequired();
 
+                    b.Property<string>("Pattern");
+
                     b.Property<string>("Type")
                         .IsRequired();
 
                     b.HasKey("Id");
 
                     b.HasAnnotation("Relational:TableName", "Dictionary");
+                });
+
+            modelBuilder.Entity("telegram.webHook.Models.Entities.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("ChatId");
+
+                    b.Property<string>("FromFirstname");
+
+                    b.Property<int>("FromId");
+
+                    b.Property<string>("FromLastname");
+
+                    b.Property<string>("FromUsername")
+                        .IsRequired();
+
+                    b.Property<string>("LocationLatitude");
+
+                    b.Property<string>("LocationLongitude");
+
+                    b.Property<string>("Text")
+                        .IsRequired();
+
+                    b.Property<DateTime>("Timestamp");
+
+                    b.HasKey("Id");
+
+                    b.HasAnnotation("Relational:TableName", "Message");
                 });
         }
     }

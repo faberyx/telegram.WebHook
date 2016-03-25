@@ -24,6 +24,7 @@ namespace telegram.webHook
                 .AddJsonFile("appsettings.json")
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+            /*
             Log.Logger = new LoggerConfiguration()
                .MinimumLevel.Debug()
                .WriteTo.RollingFile(
@@ -31,6 +32,7 @@ namespace telegram.webHook
                    LogEventLevel.Debug)
                .WriteTo.LiterateConsole(LogEventLevel.Information)
                .CreateLogger();
+               */
         }
 
         public IConfigurationRoot Configuration { get; set; }
